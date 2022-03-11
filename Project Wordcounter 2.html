@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        body{
+            padding: 50px 100px;
+        }
+        h1{
+            text-align: center;
+            background-color: #0067B0;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            
+        }
+        #textbox{
+            
+            width: 1050px;
+        }
+        h2{
+            text-align: center;
+            color: white;
+            background-color: #0067B0;
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+     
+        
+</head>
+<body>
+    <h1>Word And Character Counter</h1>
+    <textarea  id="textbox" cols="30" rows="10"></textarea>
+    <h2><span id="ab">0 </span> words
+        <span id="cd">0 </span> Character
+    </h2>
+   <script>
+       let shri = document.getElementById("textbox");
+       shri.addEventListener('input', function(){
+           let c = this.value;
+           let f = c.length ;
+           document.getElementById("cd").innerHTML = f ;
+
+           c = c.trim();
+           let a = c.split(" ");
+           let vishu = a.filter(function (params) {
+               return params != "" ;
+           });
+           document.getElementById("ab").innerHTML = vishu.length;
+       });
+   </script>
+</body>
+</html>
+
+
+/* text = text.trim();
+                let hi = text.split(" ");
+                let shri = hi.filter(function (params) {
+                    return params != "";
+                }); */
